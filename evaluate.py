@@ -80,22 +80,22 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--mapping_file', 
                         type=str, 
-                        default="../paper2/brushbench/mapping_file.json")
+                        default="./brushbench/mapping_file.json")
     parser.add_argument('--base_dir', 
                         type=str, 
-                        default="../paper2/brushbench")
+                        default="./brushbench")
     parser.add_argument('--vae', 
                         type=str, 
-                        default="./AsymmetricAutoencoderKL")
+                        default="./ckpt/AsymmetricAutoencoderKL")
     parser.add_argument('--unet', 
                         type=str, 
-                        default="./unet")
+                        default="./ckpt/unet")
     parser.add_argument('--saving_root', 
                         type=str, 
-                        default="../experiment_data")
+                        default="./results")
     parser.add_argument('--sub_path', 
                         type=str, 
-                        default="reproduce2")
+                        default="reproduce")
     args = parser.parse_args()
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
